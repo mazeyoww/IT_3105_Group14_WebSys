@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <script>
+            let name=prompt("Please enter your name:");  
+
+            console.log("Please enter your name:");
+            let fname = prompt("Enter your name:");
+            console.log("Welcome," + fname + "!");
+
+            console.log("Please enter your age:");
+            let age = prompt("Enter your age:");
+            console.log("You are " + age + " years old.");
+
+            console.log("Please enter your city:");
+            let city = prompt("Enter your city:");
+            console.log("You live in " + city + ".");
+
+            let num1 = 10; let num2 = 5;
+            let result = num1 + num2;
+            console.log("Result is: ", result);
+
+            let str1 = "Love";
+            let str2 = "Language";
+            let message = str1 + str2;
+            console.log("Message is: ", message);
+
+            if (age >= 18) {
+                console.log("You are an adult.");
+            } else {
+                console.log("You are not an.");
+            }
+
+            let singer = "Charlie";
+
+            switch (singer) {
+                case "Justin":
+                    console.log("The Justin Bieber!");
+                    break;
+                case "Demi":
+                    console.log("The Demi Lovato");
+                    break;
+                case "Charlie":
+                    console.log("My Charlie Puth the Cutie!")
+                    break;
+                case "Adel":
+                    console.log("Adel of all time!")        
+                    break;
+                default:
+                    console.log("The singers is Unknown.");
+            }
+
+            for (let i = 0; i < 5; i++) {
+                console.log("Iteration: ", i);
+            }
+
+            let j = 0;
+
+            while (j < 10) {
+                console.log("Iteration: ", j);
+                j+=2;
+            }
+
+            let k = 0;
+
+            do {
+                console.log("Iteration: ", k);
+                k++;
+            } while (k < 5);
+
+            let singers = ["Charlie", "Demi", "Justin", "Adele" ];
+            console.log(singers[0]);
+            console.log(singers[1]);
+            console.log(singers[2]);
+            console.log(singers[3]);
+
+            let numbers = [1, 2, 3, 4, 5];
+            for (let i = 0; i < 5; i++) {
+                console.log(numbers[i]);
+            }
+
+            let names = ["Simon", "Penelope", "Kate", "Anthony", "Marina"];
+            names[0] = "Basset";
+            names[3] = "Bridgerton";
+            console.log(names[0]);
+            console.log(names[3]);
+
+            let singers2 = ["Charlie", "Demi", "Justin", "Adele" ];
+            singers2.push("Justin");
+            console.log(singers2);
+
+            singers2.pop();
+            console.log(singers2);
+
+            function greet(name) {
+                console.log("Hello, " + name + "!");
+            }
+
+            greet("Park Chanyeol");
+
+            
+        </script>
+    </body>    
+</html>

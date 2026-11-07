@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>Displaying Names</title>
+    </head>
+    <body>
+        <h2 id="title">Welcome to the System</h2>
+        <button id="btn">Click Me</button>
+
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <button id="addBtn">Add</button>
+        <p id="result">The sum will appear here.</p>
+        <script>
+            // displaying names using square brackets
+
+            let students = ["Ana","Ben","Carlo"];
+
+            console.log("First student: ", students[0]);
+            console.log("All students: ", students);
+
+            // using for loop to calculate the total sales
+
+            let sales = [150, 200, 350, 100];
+            let total = 0;
+
+            for(let i = 0; i < sales.length; i++) {
+                total += sales[i];
+            }   
+            console.log("Total sales: ", total);
+            
+            // finding the highest score using math.max() function
+
+            let scores = [78, 92, 85, 88, 95];
+            let highest = scores[0];
+            
+            for (let i = 1; i < scores.length; i++) {
+                if (scores[i] > highest) {
+                    highest = scores[i];
+                }
+            }
+            console.log("Highest score: ", highest);
+
+            // updating inventory
+
+            let storeInventory = ["Notebook","pen","Folder"];
+            storeInventory[1] = "Pencil";
+            console.log(storeInventory);
+
+            // loops 1-5
+
+            for (let i = 1; i <= 5; i++) {
+                console.log(i);
+            }
+
+            // sum of even numbers from 1 to 10
+
+            let sum = 0;
+
+            for (let i = 1; i <=10; i++) {
+                if (i % 2 == 0) {
+                    sum += i;
+                }            }
+            console.log("Sum of even numbers: ", sum);
+
+            // while loop countdown from 5 to 1
+
+            let num = 5;
+
+            while (num > 0) {
+                console.log(num);
+                num--;
+            }
+            console.log("Time's up!");
+
+            // calculating total and average expenses
+
+            let expenses = [250, 500, 150, 300];
+
+            for (let i = 0; i < expenses.length; i++) {
+                total += expenses[i];
+            }
+            let average = total / expenses.length;
+            console.log("Total expenses: ", total);
+            console.log("Average expense: ", average);
+
+            // conditional statements
+
+            let score = 82;
+
+            if (score >= 75) {
+                console.log("You passed the exam!");
+            } else {
+                console.log("You failed the exam.");
+            }
+
+            let num1 = Number(prompt("Enter first number:"));
+            let num2 = Number(prompt("Enter second number:"));
+            let operator =  prompt("Enter operator (+, -, *, /):");
+
+            if (operator == "+") {
+                console.log("result: ", num1 + num2);
+            } else if (operator == "-") {
+                console.log("result: ", num1 - num2);
+            } else if (operator == "*") {
+                console.log("result: ", num1 * num2);
+            } else if (operator == "/") {
+                if (num2 != 0) {
+                    console.log("result: ", num1 / num2);
+                } else {
+                    console.log("cannot be divided by zero");
+                }
+            } else {
+                console.log("Invalid operator");
+            }
+
+            const title = document.getElementById("title");
+            const button = document.getElementById("btn");
+            button.addEventListener ("click", function() {
+            title.textContent = "System Ready!";});
+
+            document.getElementById("addBtn").addEventListener("click", function() {
+            const num1 = Number(document.getElementById("num1").value);
+            const num2 = Number(document.getElementById("num2").value);
+            document.getElementById("result").textContent = "The sum is: " + (num1 + num2);
+            });
+        </script>
+    </body>    
+</html>
+
